@@ -67,6 +67,26 @@ def TagSelector(question, answer):
         tag = "entertainment"
     elif any(word in tokens for word in ["music", "song", "playlist", "genre", "band"]):
         tag = "music"
+    elif any(word in tokens for word in ["narrate a story", "tell a story", "narrate a book", "read a book", "read a story", "read the summary of book", "read the story", "narrate the story", "tell the story"]):
+        tag = "story_teller"
+    elif any(word in tokens for word in ["fantasy", "magic", "dragons", "sorcery", "wizardry"]):
+        tag = "Fantasy"
+    elif any(word in tokens for word in ["classic", "literary", "timeless", "time-honored", "ageless"]):
+        tag = "classics"
+    elif any(word in tokens for word in ["biography", "autobiography", "life story", "memoir", "personal history"]):
+        tag = "biography"
+    elif any(word in tokens for word in ["history", "past", "historical", "ancestry", "heritage"]):
+        tag = "history"
+    elif any(word in tokens for word in ["self help", "personal growth", "self improvement", "self development"]):
+        tag = "self_help"
+    elif any(word in tokens for word in ["thriller", "suspense", "mystery", "sleuth", "detective"]):
+        tag = "Thriller"
+    elif any(word in tokens for word in ["mystery", "enigma", "puzzle", "secret", "conundrum"]):
+        tag = "Mystery"
+    elif any(word in tokens for word in ["romance", "love", "passion", "affection", "devotion"]):
+        tag = "Romance"
+    elif any(word in tokens for word in ["science fiction", "sci-fi", "futuristic", "outer space", "extraterrestrial"]):
+        tag = "Science Fiction"
     elif any(word in tokens for word in ["book", "author", "genre", "reading", "recommendation"]):
         tag = "books"
     elif any(word in tokens for word in ["sports", "game", "score", "team", "athlete"]):
